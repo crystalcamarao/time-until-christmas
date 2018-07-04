@@ -40,13 +40,15 @@ const current = new Date();
 var currentYear = current.getFullYear();
 
 //For December 26-31, set to NEXT year. You can remove this entire code block!
+/*
 var currentMonth = current.getMonth();
 var currentDate = current.getDate();
 if(currentMonth==11)
    {
-     if (currentDate==26 || currentDate==27 || currentDate==28 || currentDate==29 || currentDate==30 || currentDate==31)
+     if (currentDate > 25)
        currentYear = currentYear + 1;
    }
+*/
 
 const now = new Date().getTime();
 
@@ -104,7 +106,7 @@ function countdownMessage() {
    	 }
 	
 //Change the text about Christmas!
-	status += ' left until #Christmas' + currentYear + '! #Christmas #ChristmasCountdown #Xmas #ChristmasTime #holidays #MerryChristmas';
+	status += ' left until #Christmas' + currentYear + '!';
 }
 else
 {
