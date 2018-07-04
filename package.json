@@ -1,7 +1,7 @@
 {
-  "name": "until-xmas",
+  "name": "time-until-christmas",
   "version": "0.0.1",
-  "description": "A simple Twitter bot by Crystal Camarao that tells you the time left until Christmas.",
+  "description": "A simple Twitter bot that tells you the time left until Christmas.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
