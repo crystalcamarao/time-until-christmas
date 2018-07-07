@@ -39,8 +39,7 @@ const current = new Date();
 
 var currentYear = current.getFullYear();
 
-//For December 26-31, set to NEXT year. You can remove this entire code block!
-/*
+//For December 26-31, set to NEXT year.
 var currentMonth = current.getMonth();
 var currentDate = current.getDate();
 if(currentMonth==11)
@@ -48,12 +47,13 @@ if(currentMonth==11)
      if (currentDate > 25)
        currentYear = currentYear + 1;
    }
-*/
 
+//Get current timestamp using UTC
 const now = new Date().getTime();
 
 //Set the date to which you want to count down to here!
-const end =  new Date(currentYear, 11, 25, 0, 0, 0, 1).getTime();
+//Uses UTC time zone
+const end =  new Date(Date.UTC(currentYear, 11, 25, 0, 0, 0, 1)).getTime();
 
 const diffTime = end - now;
 
