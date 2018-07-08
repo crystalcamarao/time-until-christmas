@@ -35,21 +35,24 @@ var listener = app.listen(process.env.PORT, function () {
 
 const moment = require ("moment");
 
-//Get current timestamp using UTC
+//Get current date and time
 const current = new Date();
+
+//Get current timestamp in UTC
 const now = current.getTime();
 
-//For December 26-31, set to NEXT year.
 var currentYear = current.getUTCFullYear();
 var currentMonth = current.getUTCMonth();
 var currentDate = current.getUTCDate();
+
+//For December 26-31, set to NEXT year.
 if(currentMonth==11)
    {
      if (currentDate > 25)
        currentYear = currentYear + 1;
    }
 
-//Set the date to which you want to count down to here! (uses UTC time zone)
+//Set the date to which you want to count down to here! Please note it is converted to UTC
 const end =  new Date(Date.UTC(currentYear, 11, 25, 0, 0, 0, 1)).getTime();
 
 const diffTime = end - now;
