@@ -33,6 +33,10 @@ var listener = app.listen(process.env.PORT, function () {
   console.log('Your bot is running on port ' + listener.address().port);
 });
 
+//Set the date to which you want to count down to here!
+var countdownMonth=11;
+var countdownDay=25;
+
 const moment = require ("moment");
 
 //Get current date and time
@@ -46,14 +50,14 @@ var currentMonth = current.getUTCMonth();
 var currentDate = current.getUTCDate();
 
 //For December 26-31, set to NEXT year.
-if(currentMonth==11)
+if(currentMonth==countdownMonth)
    {
      if (currentDate > 25)
        currentYear = currentYear + 1;
    }
 
-//Set the date to which you want to count down to here! Please note it is converted to UTC
-const end =  new Date(Date.UTC(currentYear, 11, 25, 0, 0, 0, 1)).getTime();
+//Convert countdown date to UTC
+const end =  new Date(Date.UTC(currentYear, countdownMonth, countdownDay, 0, 0, 0, 1)).getTime();
 
 const diffTime = end - now;
 
